@@ -15,11 +15,11 @@ import RegisterNewStaff from "./components/registerNewStaff/registerNewStaff";
 import PatientMonitoringPage from "./pages/patientMonitoringPage/PatientMonitoringPage";
 import PatientDetails from "./components/PatientDetails/patientDetails";
 
-import HospitalOwnerList from "./pages/entity_List/hospitalOwnerList/HospitalOwnerList";
-import DoctorList from "./pages/entity_List/doctorList/DoctorList";
-import StaffList from "./pages/entity_List/staffList/StaffList";
-import PatientList from "./pages/entity_List/patientList/PatientList";
-import MonitorPatientList from "./pages/entity_List/monitorPatientList/MonitorPatientList";
+import HospitalOwnerList from "./pages/entityList/hospitalOwnerList/HospitalOwnerList";
+import DoctorList from "./pages/entityList/doctorList/DoctorList";
+import StaffList from "./pages/entityList/staffList/StaffList";
+import PatientList from "./pages/entityList/patientList/PatientList";
+import MonitorPatientList from "./pages/entityList/monitorPatientList/MonitorPatientList";
 
 function App() {
   return (
