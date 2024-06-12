@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from 'react-router-dom';
 import Editdoctor from "../../edit/editdoctor/editdoctor";
 import DocProfile from "../../../components/Cards/docProfile/docProfile";
 
@@ -21,8 +22,10 @@ const DoctorDashboard = () => {
       {edit ? <Editdoctor /> : <></>}
       {/* List of Patients Assigned */}
       <section className="bg-blue-100 p-5 mb-8 rounded-lg shadow-md">
+        <Link to="/patient-list">
         <h3 className="text-xl font-bold mb-4">List of Patients Assigned</h3>
         {/* Add list of patients assigned */}
+        </Link>
       </section>
       {/* Add/Edit Medication */}
       <section className="bg-blue-100 p-5 mb-8 rounded-lg shadow-md">
