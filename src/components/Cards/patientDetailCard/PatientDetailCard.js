@@ -121,68 +121,196 @@
 
 
 
+// import React from 'react';
+
+// const PatientDetailCard = () => {
+//   return (
+    
+//       <div className="w-128 bg-gray-200 border border-gray-400 rounded-lg shadow-md p-4 flex justify-between">
+//       {/* Left column */}
+      
+//       <div className="flex flex-col justify-between mr-4">
+//         <div className="mb-6">
+//           <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Medical Monitor Readings</h3>
+//           <p>Heart Rate(HR) : </p>
+//           <p>Blood Pressure(BP) : </p>
+//           <p>Oxygen Saturation(SpO2) : </p>
+//           <p>Respiratory Rate(RR) : </p>
+//         </div>
+
+//         <div className="mb-6">
+//           <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Saline Fluid Level</h3>
+//           <p>No. of bottles attached at the moment : </p>
+//           <p>Bottle's Name : </p>
+//           <p>Fluid Level for each of the bottle</p>
+//           <p>Bottle count for the day : </p>
+//         </div>
+
+//         <div className="mb-6">
+//           <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Urine Bag Level</h3>
+//           <p>Urine level in the bag for the moment : </p>
+//           <p>No. of times bag was drained throughout the day : </p>
+//           <p>Urine bag expiry : </p>
+//         </div>
+//       </div>
+
+//       {/* Right column */}
+//       <div className="flex flex-col justify-between">
+//         <div className="mb-6">
+//           <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Patient's Behaviour</h3>
+//           <p>Live camera view : </p>
+//           <p>Sleep Pattern Analysis : </p>
+//           <h6 className="font-bold mb-1">Abnormal Activity Detection : </h6>
+//           <p>Generate Alarm : </p>
+//         </div>
+
+//         <div className="mb-6">
+//           <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Patient Medication Log(EXTRAS)</h3>
+//           <p>Doctor's visit for the day : </p>
+//           <p>Medicine schedule timeline : </p>
+//         </div>
+
+//         <div className="mb-6">
+//           <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Visitors Log(EXTRAS)</h3>
+//           <p>Count of visitors : </p>
+//           <p>Visitors Detail : </p>
+//           <p>Time Log(In/Out) : </p>
+//         </div>
+//       </div>
+//     </div>
+    
+//   );
+// }
+
+// export default PatientDetailCard;
+
+
+
+// import React from 'react';
+
+// const PatientDetailCard = () => {
+//   return (
+//     <>      
+//     <h3 className="text-right font-bold text-2xl mb-4">Patient Detail</h3>
+//     <div className="w-128 bg-gray-200 border border-gray-400 rounded-lg shadow-md p-4 flex justify-between mt-20">
+//       {/* Left column */}
+//       <div className="flex flex-col justify-between mr-4">
+//         <div className="mb-6">
+//           <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Medical Monitor Readings</h3>
+//           <p>Heart Rate(HR) : </p>
+//           <p>Blood Pressure(BP) : </p>
+//           <p>Oxygen Saturation(SpO2) : </p>
+//           <p>Respiratory Rate(RR) : </p>
+//         </div>
+
+//         <div className="mb-6">
+//           <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Saline Fluid Level</h3>
+//           <p>No. of bottles attached at the moment : </p>
+//           <p>Bottle's Name : </p>
+//           <p>Fluid Level for each of the bottle</p>
+//           <p>Bottle count for the day : </p>
+//         </div>
+
+//         <div className="mb-6">
+//           <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Urine Bag Level</h3>
+//           <p>Urine level in the bag for the moment : </p>
+//           <p>No. of times bag was drained throughout the day : </p>
+//           <p>Urine bag expiry : </p>
+//         </div>
+//       </div>
+
+//       {/* Right column */}
+//       <div className="flex flex-col justify-between">
+//         <div className="mb-6">
+//           <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Patient's Behaviour</h3>
+//           <p>Live camera view : </p>
+//           <p>Sleep Pattern Analysis : </p>
+//           <h6 className="font-bold mb-1">Abnormal Activity Detection : </h6>
+//           <p>Generate Alarm : </p>
+//         </div>
+
+//         <div className="mb-6">
+//           <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Patient Medication Log(EXTRAS)</h3>
+//           <p>Doctor's visit for the day : </p>
+//           <p>Medicine schedule timeline : </p>
+//         </div>
+
+//         <div className="mb-6">
+//           <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Visitors Log(EXTRAS)</h3>
+//           <p>Count of visitors : </p>
+//           <p>Visitors Detail : </p>
+//           <p>Time Log(In/Out) : </p>
+//         </div>
+//       </div>
+//     </div>
+//     </>
+//   );
+// }
+
+// export default PatientDetailCard;
+
+
 import React from 'react';
 
 const PatientDetailCard = () => {
   return (
-    
-      <div className="w-128 bg-gray-200 border border-gray-400 rounded-lg shadow-md p-4 flex justify-between">
-      {/* Left column */}
-      
-      <div className="flex flex-col justify-between mr-4">
-        <div className="mb-6">
-          <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Medical Monitor Readings</h3>
-          <p>Heart Rate(HR) : </p>
-          <p>Blood Pressure(BP) : </p>
-          <p>Oxygen Saturation(SpO2) : </p>
-          <p>Respiratory Rate(RR) : </p>
-        </div>
+    <>
+      <div className="w-128 bg-gray-200 border border-gray-400 rounded-lg shadow-md p-4 mt-8">
+        <h3 className="text-center font-bold text-2xl mb-4">Patient Detail</h3>
+        <div className="flex justify-between">
+          {/* Left column */}
+          <div className="flex flex-col justify-between mr-4">
+            <div className="mb-6">
+              <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Medical Monitor Readings</h3>
+              <p>Heart Rate(HR) : </p>
+              <p>Blood Pressure(BP) : </p>
+              <p>Oxygen Saturation(SpO2) : </p>
+              <p>Respiratory Rate(RR) : </p>
+            </div>
 
-        <div className="mb-6">
-          <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Saline Fluid Level</h3>
-          <p>No. of bottles attached at the moment : </p>
-          <p>Bottle's Name : </p>
-          <p>Fluid Level for each of the bottle</p>
-          <p>Bottle count for the day : </p>
-        </div>
+            <div className="mb-6">
+              <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Saline Fluid Level</h3>
+              <p>No. of bottles attached at the moment : </p>
+              <p>Bottle's Name : </p>
+              <p>Fluid Level for each of the bottle</p>
+              <p>Bottle count for the day : </p>
+            </div>
 
-        <div className="mb-6">
-          <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Urine Bag Level</h3>
-          <p>Urine level in the bag for the moment : </p>
-          <p>No. of times bag was drained throughout the day : </p>
-          <p>Urine bag expiry : </p>
+            <div className="mb-6">
+              <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Urine Bag Level</h3>
+              <p>Urine level in the bag for the moment : </p>
+              <p>No. of times bag was drained throughout the day : </p>
+              <p>Urine bag expiry : </p>
+            </div>
+          </div>
+
+          {/* Right column */}
+          <div className="flex flex-col justify-between">
+            <div className="mb-6">
+              <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Patient's Behaviour</h3>
+              <p>Live camera view : </p>
+              <p>Sleep Pattern Analysis : </p>
+              <h6 className="font-bold mb-1">Abnormal Activity Detection : </h6>
+              <p>Generate Alarm : </p>
+            </div>
+
+            <div className="mb-6">
+              <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Patient Medication Log(EXTRAS)</h3>
+              <p>Doctor's visit for the day : </p>
+              <p>Medicine schedule timeline : </p>
+            </div>
+
+            <div className="mb-6">
+              <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Visitors Log(EXTRAS)</h3>
+              <p>Count of visitors : </p>
+              <p>Visitors Detail : </p>
+              <p>Time Log(In/Out) : </p>
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* Right column */}
-      <div className="flex flex-col justify-between">
-        <div className="mb-6">
-          <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Patient's Behaviour</h3>
-          <p>Live camera view : </p>
-          <p>Sleep Pattern Analysis : </p>
-          <h6 className="font-bold mb-1">Abnormal Activity Detection : </h6>
-          <p>Generate Alarm : </p>
-        </div>
-
-        <div className="mb-6">
-          <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Patient Medication Log(EXTRAS)</h3>
-          <p>Doctor's visit for the day : </p>
-          <p>Medicine schedule timeline : </p>
-        </div>
-
-        <div className="mb-6">
-          <h3 className="text-xl font-bold mb-2"><span className="mr-2">&#8226;</span>Visitors Log(EXTRAS)</h3>
-          <p>Count of visitors : </p>
-          <p>Visitors Detail : </p>
-          <p>Time Log(In/Out) : </p>
-        </div>
-      </div>
-    </div>
-    
+    </>
   );
 }
 
 export default PatientDetailCard;
-
-
-
