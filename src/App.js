@@ -7,12 +7,19 @@ import Navbar from "./components/navbar/Navbar";
 import HospitalProfileCompletion from "./pages/dashboardPage/hospitalOwnerDashboard/HospitalOwnerDashboard";
 import DoctorDashboard from "./pages/dashboardPage/doctorDashboard/DoctorDashboard";
 import StaffDashboard from "./pages/dashboardPage/staffDashboard/StaffDashboard";
+import AdminDashboard from "./pages/dashboardPage/adminDashboard/AdminDashboard";
 import PatientRegistration from "./components/registerPatient/registerPatient";
 import LoginPage from "./pages/loginPage/LoginPage";
 
 import RegisterNewStaff from "./components/registerNewStaff/registerNewStaff";
 import PatientMonitoringPage from "./pages/patientMonitoringPage/PatientMonitoringPage";
 import PatientDetails from "./components/PatientDetails/patientDetails";
+
+import HospitalOwnerList from "./pages/entity_List/hospitalOwnerList/HospitalOwnerList";
+import DoctorList from "./pages/entity_List/doctorList/DoctorList";
+import StaffList from "./pages/entity_List/staffList/StaffList";
+import PatientList from "./pages/entity_List/patientList/PatientList";
+import MonitorPatientList from "./pages/entity_List/monitorPatientList/MonitorPatientList";
 
 function App() {
   return (
@@ -37,6 +44,14 @@ function App() {
             />
             <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
             <Route path="/staff-dashboard" element={<StaffDashboard />} />
+            <Route path="/admin-dashboard" element={<AdminDashboard />} />
+            
+            <Route path="/hospital-owner-detail" element={<HospitalOwnerList/>}/>
+            <Route path="/doctor-detail" element={<DoctorList/>}/>
+            <Route path="/staff-detail" element={<StaffList/>}/>
+            <Route path="/patient-detail" element={<PatientList/>}/>
+            <Route path="/monitor-patient-detail" element={<MonitorPatientList/>}/>
+
             <Route
               path="/register-new-patient"
               element={<PatientRegistration />}
