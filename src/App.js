@@ -10,6 +10,7 @@ import StaffDashboard from "./pages/dashboardPage/staffDashboard/StaffDashboard"
 import AdminDashboard from "./pages/dashboardPage/adminDashboard/AdminDashboard";
 import PatientRegistration from "./components/registerPatient/registerPatient";
 import LoginPage from "./pages/loginPage/LoginPage";
+import UpdateAdminDetail from "./pages/updateAdminDetail/UpdateAdminDetail";
 
 import RegisterNewStaff from "./components/registerNewStaff/registerNewStaff";
 import PatientMonitoringPage from "./pages/patientMonitoringPage/PatientMonitoringPage";
@@ -45,6 +46,7 @@ function App() {
             <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
             <Route path="/staff-dashboard" element={<StaffDashboard />} />
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
+            <Route path="/update-admin-detail" element={<UpdateAdminDetail/>} />
             
             <Route path="/hospital-owner-detail" element={<HospitalOwnerList/>}/>
             <Route path="/doctor-detail" element={<DoctorList/>}/>
