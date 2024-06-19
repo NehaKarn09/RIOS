@@ -7,16 +7,27 @@ import Navbar from "./components/navbar/Navbar";
 import HospitalProfileCompletion from "./pages/dashboardPage/hospitalOwnerDashboard/HospitalOwnerDashboard";
 import DoctorDashboard from "./pages/dashboardPage/doctorDashboard/DoctorDashboard";
 import StaffDashboard from "./pages/dashboardPage/staffDashboard/StaffDashboard";
+import AdminDashboard from "./pages/dashboardPage/adminDashboard/AdminDashboard";
 import PatientRegistration from "./components/registerPatient/registerPatient";
 import LoginPage from "./pages/loginPage/LoginPage";
+<<<<<<< RIOS-New-Branch
+import UpdateAdminDetail from "./pages/updateAdminDetail/UpdateAdminDetail";
+=======
 import StaffList from './pages/staffList/StaffList';
 import DoctorList from './pages/doctorList/DoctorList';
 import PatientList from './pages/patientList/PatientList';
 import UpdateOwnerDetail from './pages/updateOwnerDetail/UpdateOwnerDetail';
+>>>>>>> main/
 
 import RegisterNewStaff from "./components/registerNewStaff/registerNewStaff";
 import PatientMonitoringPage from "./pages/patientMonitoringPage/PatientMonitoringPage";
 import PatientDetails from "./components/PatientDetails/patientDetails";
+
+import HospitalOwnerList from "./pages/entityList/hospitalOwnerList/HospitalOwnerList";
+import DoctorList from "./pages/entityList/doctorList/DoctorList";
+import StaffList from "./pages/entityList/staffList/StaffList";
+import PatientList from "./pages/entityList/patientList/PatientList";
+import MonitorPatientList from "./pages/entityList/monitorPatientList/MonitorPatientList";
 
 function App() {
   return (
@@ -46,6 +57,15 @@ function App() {
 
             <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
             <Route path="/staff-dashboard" element={<StaffDashboard />} />
+            <Route path="/admin-dashboard" element={<AdminDashboard />} />
+            <Route path="/update-admin-detail" element={<UpdateAdminDetail/>} />
+            
+            <Route path="/hospital-owner-detail" element={<HospitalOwnerList/>}/>
+            <Route path="/doctor-detail" element={<DoctorList/>}/>
+            <Route path="/staff-detail" element={<StaffList/>}/>
+            <Route path="/patient-detail" element={<PatientList/>}/>
+            <Route path="/monitor-patient-detail" element={<MonitorPatientList/>}/>
+
             <Route
               path="/register-new-patient"
               element={<PatientRegistration />}

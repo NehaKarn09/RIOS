@@ -1,3 +1,18 @@
+<<<<<<< RIOS-New-Branch
+
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+const Navbar = () => {
+
+  const navigate=useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('username');
+    navigate('/login');
+  }
+=======
 <<<<<<< HEAD
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -23,6 +38,7 @@ const Navbar = () => {
       navigate("/login");
     }
 >>>>>>> a60fcd374bc9e1dc1b3b1bdd6b6f0f370d976b95
+>>>>>>> main
   return (
     <nav className="bg-gray-800">
       <div className="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,10 +92,19 @@ const Navbar = () => {
           </div>
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6">
+<<<<<<< RIOS-New-Branch
+              {!localStorage.getItem('authToken')?<Link
+                to="/login"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Login
+              </Link> :<button onClick={handleLogout} className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Logout</button>}
+=======
                 {!localStorage.getItem('authToken')?<Link
                 to="/login"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                   Login</Link>:<button onClick={handleLogout} className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Logout</button>}
+>>>>>>> main
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">
