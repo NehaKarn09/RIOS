@@ -17,8 +17,8 @@ import PatientDetails from "./components/PatientDetails/patientDetails";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
-        <nav className="h-[9vh]">
+      <div className="min-h-screen flex flex-col ">
+        <nav className="h-[9vh] z-20">
           <Navbar />
         </nav>
 
