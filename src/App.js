@@ -9,6 +9,10 @@ import DoctorDashboard from "./pages/dashboardPage/doctorDashboard/DoctorDashboa
 import StaffDashboard from "./pages/dashboardPage/staffDashboard/StaffDashboard";
 import PatientRegistration from "./components/registerPatient/registerPatient";
 import LoginPage from "./pages/loginPage/LoginPage";
+import StaffList from './pages/staffList/StaffList';
+import DoctorList from './pages/doctorList/DoctorList';
+import PatientList from './pages/patientList/PatientList';
+import UpdateOwnerDetail from './pages/updateOwnerDetail/UpdateOwnerDetail';
 
 import RegisterNewStaff from "./components/registerNewStaff/registerNewStaff";
 import PatientMonitoringPage from "./pages/patientMonitoringPage/PatientMonitoringPage";
@@ -35,6 +39,11 @@ function App() {
               path="/hospital-owner-dashboard"
               element={<HospitalProfileCompletion />}
             />
+            <Route
+              path="/update-owner-detail"
+              element={<UpdateOwnerDetail/>}
+            />
+
             <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
             <Route path="/staff-dashboard" element={<StaffDashboard />} />
             <Route
@@ -46,6 +55,11 @@ function App() {
               path="/monitor-patient"
               element={<PatientMonitoringPage />}
             />
+
+            <Route path="/staff-list" element={<StaffList/>} />
+            <Route path="/doctor-list" element={<DoctorList/>} />
+            <Route path="/patient-list" element={<PatientList/>} />
+
             <Route
               path="/monitor-patient-details/:id"
               element={<PatientDetails />}
