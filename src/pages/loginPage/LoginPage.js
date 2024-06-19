@@ -1,3 +1,7 @@
+<<<<<<< RIOS-New-Branch
+
+=======
+>>>>>>> main
 import React, { useState } from "react";
 import pms from "../../data/images/pms.jpg";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +17,10 @@ function LoginPage() {
 
   const handleLogin = async () => {
     
+<<<<<<< RIOS-New-Branch
+    // const username = getUsernameFromEmail(credentials.email);
+=======
+>>>>>>> main
     try {
       const response = await axios.post("https://merchandise-edt-les-crossing.trycloudflare.com/login/", {
        username : credentials.username,
@@ -26,12 +34,21 @@ function LoginPage() {
       console.log("Login response:", response.data);
       const data = response.data;
      
+<<<<<<< RIOS-New-Branch
+  
+        if (data.role === "Admin") {
+          localStorage.setItem("authToken", data.access);
+          localStorage.setItem("username", credentials.username);
+          localStorage.setItem("role", data.role);
+          navigate("/admin-dashboard");
+=======
       
         if (data.role === "Hospital_Owner") {
           localStorage.setItem("authToken", data.access);
           localStorage.setItem("username", credentials.username);
           localStorage.setItem("role", data.role);
           navigate("/hospital-owner-dashboard");
+>>>>>>> main
         } else {
         alert("You are not authorized to access this dashboard.");
       }
@@ -105,9 +122,13 @@ function LoginPage() {
 }
 
 
+<<<<<<< RIOS-New-Branch
+export default LoginPage;
+=======
 export default LoginPage;
 
 
 
 
 
+>>>>>>> main
