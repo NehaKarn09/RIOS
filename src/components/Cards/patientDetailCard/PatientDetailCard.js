@@ -1,12 +1,14 @@
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import { backendURL } from "../../../utils/backendURL";
 
 const PatientDetailCard = () => {
+  const [data, setData] = useState("");
   const getData = async () => {
     try {
-      const response = await axios.get(`${backendURL}/api/data`);
-      console.log(response.data);
+      const response = await axios.get(`${backendURL}/api/data/`);
+      // console.log(response.data);
+      setData(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -45,9 +47,11 @@ const PatientDetailCard = () => {
               <h3 className="text-xl font-bold mb-2">
                 <span className="mr-2">&#8226;</span>Urine Bag Level
               </h3>
-              <p>Urine level in the bag for the moment : </p>
-              <p>Remaining Time : </p>
-              <p>Infusion Rate : </p>
+              <p>
+                Urine level in the bag for the moment : {data?.current_level}
+              </p>
+              <p>Remaining Time : {data?.time_remaining} </p>
+              <p>Infusion Rate : {data?.infusion_rate} </p>
             </div>
           </div>
 
