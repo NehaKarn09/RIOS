@@ -10,7 +10,14 @@ import StaffDashboard from "./pages/dashboardPage/staffDashboard/StaffDashboard"
 import AdminDashboard from "./pages/dashboardPage/adminDashboard/AdminDashboard";
 import PatientRegistration from "./components/registerPatient/registerPatient";
 import LoginPage from "./pages/loginPage/LoginPage";
+<<<<<<< RIOS-New-Branch
 import UpdateAdminDetail from "./pages/updateAdminDetail/UpdateAdminDetail";
+=======
+import StaffList from './pages/staffList/StaffList';
+import DoctorList from './pages/doctorList/DoctorList';
+import PatientList from './pages/patientList/PatientList';
+import UpdateOwnerDetail from './pages/updateOwnerDetail/UpdateOwnerDetail';
+>>>>>>> main/
 
 import RegisterNewStaff from "./components/registerNewStaff/registerNewStaff";
 import PatientMonitoringPage from "./pages/patientMonitoringPage/PatientMonitoringPage";
@@ -25,8 +32,8 @@ import MonitorPatientList from "./pages/entityList/monitorPatientList/MonitorPat
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
-        <nav className="h-[9vh]">
+      <div className="min-h-screen flex flex-col ">
+        <nav className="h-[9vh] z-20">
           <Navbar />
         </nav>
 
@@ -43,6 +50,11 @@ function App() {
               path="/hospital-owner-dashboard"
               element={<HospitalProfileCompletion />}
             />
+            <Route
+              path="/update-owner-detail"
+              element={<UpdateOwnerDetail/>}
+            />
+
             <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
             <Route path="/staff-dashboard" element={<StaffDashboard />} />
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
@@ -63,6 +75,11 @@ function App() {
               path="/monitor-patient"
               element={<PatientMonitoringPage />}
             />
+
+            <Route path="/staff-list" element={<StaffList/>} />
+            <Route path="/doctor-list" element={<DoctorList/>} />
+            <Route path="/patient-list" element={<PatientList/>} />
+
             <Route
               path="/monitor-patient-details/:id"
               element={<PatientDetails />}
