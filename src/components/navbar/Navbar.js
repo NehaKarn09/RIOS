@@ -1,26 +1,17 @@
-<<<<<<< HEAD
-import { Link, useNavigate } from "react-router-dom";
-=======
-<<<<<<< RIOS-New-Branch
-
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-
-const Navbar = () => {
-
-  const navigate=useNavigate();
-
-  const handleLogout = () => {
-    localStorage.removeItem('authToken');
-    localStorage.removeItem('username');
-    navigate('/login');
-  }
-=======
-<<<<<<< HEAD
->>>>>>> 60a1a36e02380be90138f3c8060e395ccf070d4a
-import React, { useState } from "react";
-
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+// const Navbar = () => {
+
+//   const navigate=useNavigate();
+
+//   const handleLogout = () => {
+//     localStorage.removeItem('authToken');
+//     localStorage.removeItem('username');
+//     navigate('/login');
+//   }
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,21 +21,12 @@ const Navbar = () => {
   };
   let navigate = useNavigate();
 
-<<<<<<< HEAD
   const handleLogout = () => {
     localStorage.removeItem("authToken");
     localStorage.removeItem("username");
     navigate("/login");
   };
-=======
-    const handleLogout=()=>{
-      localStorage.removeItem('authToken');
-      localStorage.removeItem('username'); 
-      navigate("/login");
-    }
->>>>>>> a60fcd374bc9e1dc1b3b1bdd6b6f0f370d976b95
->>>>>>> main
->>>>>>> 60a1a36e02380be90138f3c8060e395ccf070d4a
+
   return (
     <nav className="bg-gray-800">
       <div className="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
@@ -98,7 +80,6 @@ const Navbar = () => {
           </div>
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6">
-<<<<<<< HEAD
               {!localStorage.getItem("authToken") ? (
                 <Link
                   to="/login"
@@ -114,21 +95,22 @@ const Navbar = () => {
                   Logout
                 </button>
               )}
-=======
-<<<<<<< RIOS-New-Branch
-              {!localStorage.getItem('authToken')?<Link
-                to="/login"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Login
-              </Link> :<button onClick={handleLogout} className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Logout</button>}
-=======
-                {!localStorage.getItem('authToken')?<Link
-                to="/login"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                  Login</Link>:<button onClick={handleLogout} className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Logout</button>}
->>>>>>> main
->>>>>>> 60a1a36e02380be90138f3c8060e395ccf070d4a
+
+              {!localStorage.getItem("authToken") ? (
+                <Link
+                  to="/login"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  Login
+                </Link>
+              ) : (
+                <button
+                  onClick={handleLogout}
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  Logout
+                </button>
+              )}
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">
