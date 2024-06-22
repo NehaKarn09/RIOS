@@ -6,7 +6,11 @@ const RealTimeData = () => {
 
   const fetchData = async () => {
     try {
+<<<<<<< RIOS_new_branch
       const response = await axios.get('https://kids-pottery-packing-promote.trycloudflare.com/api/data/');
+=======
+      const response = await axios.get('https://kids-pottery-packing-promote.trycloudflare.com/get_data/');
+>>>>>>> main
       setData(response.data);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -41,4 +45,8 @@ const RealTimeData = () => {
   );
 };
 
+<<<<<<< RIOS_new_branch
 export default RealTimeData;
+=======
+export default RealTimeData;
+>>>>>>> main
