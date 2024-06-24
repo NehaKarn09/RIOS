@@ -16,9 +16,8 @@ function PatientMonitoringPage() {
       <div className="h-full w-full overflow-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 justify-items-center">
         {patient_List.map((el) => (
           //   <Link to='/monitor-patient-details/:id=${el.id}'>
-          <Link to={`/monitor-patient-details/:id=${el.id}`}>
-            <PatientMonitorCard patient={el} />
-          </Link>
+
+          <PatientMonitorCard patient={el} />
         ))}
       </div>
     </>

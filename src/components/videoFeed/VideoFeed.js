@@ -5,8 +5,8 @@ const VideoFeed = () => {
         <div className="container mt-5">
             <div className="row">
                 <div className="col-12">
-                    <h3 className='font-bold text-center'>Live Video Feed</h3>
-                    <img src="https://kids-pottery-packing-promote.trycloudflare.com/video_feed_florios/" controls style={{ width: '100%', height: '20%' }} />
+                    <h3 className="font-bold text-2xl text-center">Live Video Feed</h3>
+                    <img src="https://kids-pottery-packing-promote.trycloudflare.com/video_feed/" controls style={{ width: '40rem', height: '50rem' }} />
                 </div>
             </div>
         </div>
@@ -14,3 +14,4 @@ const VideoFeed = () => {
 };
 
 export default VideoFeed;
+

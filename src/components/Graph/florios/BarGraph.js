@@ -1,39 +1,42 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { Bar } from 'react-chartjs-2';
-import 'chart.js/auto';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Bar } from "react-chartjs-2";
+import "chart.js/auto";
+import { backendURL } from "../../../utils/backendURL";
 
-const InfusionRateChart = () => {
+const BarGraph = () => {
   const [chartData, setChartData] = useState(null);
 
-const fetchData = async () => {
+  const fetchData = async () => {
     try {
-      const response = await axios.get('https://kids-pottery-packing-promote.trycloudflare.com/api/history/');
+      const response = await axios.get(`${backendURL}/monitoring-data/`);
       const data = response.data;
-  
+
       // Use only the last 10 items
       const last10Data = data.slice(-10);
-  
+
       // Prepare data for the chart
-      const labels = last10Data.map(item => new Date(item.timestamp).toLocaleTimeString());
-      const infusionRates = last10Data.map(item => item.infusion_rate);
-  
+      const labels = last10Data.map((item) =>
+        new Date(item.timestamp).toLocaleTimeString()
+      );
+      const infusionRates = last10Data.map((item) => item.infusion_rate);
+
       setChartData({
         labels: labels,
         datasets: [
           {
-            label: 'Infusion Rate',
+            label: "Infusion Rate",
             data: infusionRates,
-            backgroundColor: 'rgba(75, 192, 192, 0.6)',
-            borderColor: 'rgba(75, 192, 192, 1)',
+            backgroundColor: "rgba(75, 192, 192, 0.6)",
+            borderColor: "rgba(75, 192, 192, 1)",
             borderWidth: 1,
           },
         ],
       });
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error("Error fetching data:", error);
     }
-};
+  };
 
   useEffect(() => {
     fetchData(); // Initial fetch
@@ -50,28 +53,28 @@ const fetchData = async () => {
   }
 
   return (
-    <div className="flex flex-col items-center p-4">
+    <div className="flex flex-col items-center p-4 ">
       <h2 className="text-xl font-bold mb-4">Infusion Rate Over Time</h2>
       <div className="w-full max-w-4xl overflow-x-auto">
-        <div className="min-w-[600px] h-[400px]">
-          <Bar 
-            data={chartData} 
+        <div className="min-w-[200px] h-[200px]">
+          <Bar
+            data={chartData}
             options={{
               maintainAspectRatio: false,
               scales: {
                 x: {
                   title: {
                     display: true,
-                    text: 'Timestamp'
-                  }
+                    text: "Timestamp",
+                  },
                 },
                 y: {
                   title: {
                     display: true,
-                    text: 'Infusion Rate'
-                  }
-                }
-              }
+                    text: "Infusion Rate",
+                  },
+                },
+              },
             }}
           />
         </div>
@@ -80,4 +83,4 @@ const fetchData = async () => {
   );
 };
 
-export default InfusionRateChart;
+export default BarGraph;

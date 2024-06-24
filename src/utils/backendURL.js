@@ -1,2 +1,2 @@
 export const backendURL =
-  "https://kids-pottery-packing-promote.trycloudflare.com";
+  "https://tuesday-therapeutic-circuit-translations.trycloudflare.com";

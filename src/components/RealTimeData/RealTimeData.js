@@ -1,19 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { backendURL } from "../../utils/backendURL";
 
 const RealTimeData = () => {
-  const [data, setData] = useState({ current_level: 0, time_remaining: 0, infusion_rate: 0 });
+  const [data, setData] = useState({
+    current_level: 0,
+    time_remaining: 0,
+    infusion_rate: 0,
+  });
 
   const fetchData = async () => {
     try {
-<<<<<<< RIOS_new_branch
-      const response = await axios.get('https://kids-pottery-packing-promote.trycloudflare.com/api/data/');
-=======
-      const response = await axios.get('https://kids-pottery-packing-promote.trycloudflare.com/get_data/');
->>>>>>> main
+      const response = await axios.get(`${backendURL}/api/data/`);
+
       setData(response.data);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error("Error fetching data:", error);
     }
   };
 
@@ -28,25 +30,23 @@ const RealTimeData = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center p-4">
+    <div className="flex flex-col items-center p-4 h-[300px]">
       <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
         <h2 className="text-2xl font-bold mb-4">Real-Time Data</h2>
         <div className="mb-2">
-          <span className="font-semibold">Current Level:</span> {data.current_level.toFixed(2)}
+          <span className="font-semibold">Current Level:</span>{" "}
+          {data.current_level.toFixed(2)}
         </div>
         <div className="mb-2">
-          <span className="font-semibold">Time Remaining:</span> {data.time_remaining.toFixed(2)}
+          <span className="font-semibold">Time Remaining:</span>{" "}
+          {data.time_remaining.toFixed(2)}
         </div>
         <div>
-          <span className="font-semibold">Infusion Rate:</span> {data.infusion_rate.toFixed(2)}
+          <span className="font-semibold">Infusion Rate:</span>{" "}
+          {data.infusion_rate.toFixed(2)}
         </div>
       </div>
     </div>
   );
 };
-
-<<<<<<< RIOS_new_branch
 export default RealTimeData;
-=======
-export default RealTimeData;
->>>>>>> main

@@ -18,13 +18,14 @@ import UpdateOwnerDetail from "./pages/updateOwnerDetail/UpdateOwnerDetail";
 
 import RegisterNewStaff from "./components/registerNewStaff/registerNewStaff";
 import PatientMonitoringPage from "./pages/patientMonitoringPage/PatientMonitoringPage";
-import PatientDetails from "./components/PatientDetails/patientDetails";
 
 import HospitalOwnerList from "./pages/entityList/hospitalOwnerList/HospitalOwnerList";
 // import DoctorList from "./pages/entityList/doctorList/DoctorList";
 // import StaffList from "./pages/entityList/staffList/StaffList";
 // import PatientList from "./pages/entityList/patientList/PatientList";
 import MonitorPatientList from "./pages/entityList/monitorPatientList/MonitorPatientList";
+import UriosDetails from "./components/UriosDetails/uriosDetails";
+import FloriosDetails from "./components/FloriosDetails/floriosDetails";
 
 function App() {
   return (
@@ -87,8 +88,12 @@ function App() {
             <Route path="/patient-list" element={<PatientList />} />
 
             <Route
-              path="/monitor-patient-details/:id"
-              element={<PatientDetails />}
+              path="/urios-patient-details/:id"
+              element={<UriosDetails />}
+            />
+            <Route
+              path="/florios-patient-details/:id"
+              element={<FloriosDetails />}
             />
           </Routes>
         </main>
