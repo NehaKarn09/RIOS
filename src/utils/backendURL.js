@@ -1,2 +1,2 @@
 export const backendURL =
-  "http://127.0.0.1:8000/";
+  "https://architect-granny-g-fundamental.trycloudflare.com/";

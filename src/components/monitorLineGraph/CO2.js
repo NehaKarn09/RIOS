@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
+import { backendURL } from '../../utils/backendURL';
 
 const CO2 = () => {
   const [chartData, setChartData] = useState(null);
 
 const fetchData = async () => {
     try {
-      const response = await axios.get('https://mr-careful-broadway-print.trycloudflare.com/readings/');
+      const response = await axios.get(`${backendURL}/readings/`);
       const data = response.data;
   
       // Use only the last 10 items
