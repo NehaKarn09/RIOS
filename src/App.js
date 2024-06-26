@@ -83,7 +83,7 @@ function App() {
               path="/monitor-patient"
               element={<PatientMonitoringPage />}
             />
-            <Route path="/monitor-page" element={<MonitoringGraph/>} />
+            <Route path="/monitor-patient-details/:id" element={<MonitoringGraph/>} />
 
             <Route path="/staff-list" element={<StaffList />} />
             <Route path="/doctor-list" element={<DoctorList />} />
