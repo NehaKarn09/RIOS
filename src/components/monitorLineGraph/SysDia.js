@@ -116,6 +116,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
+import { backendURL } from '../../utils/backendURL';
 
 const SysDia = () => {
   const [chartData, setChartData] = useState(null);
@@ -123,7 +124,7 @@ const SysDia = () => {
   const fetchData = async () => {
     console.log('Fetching data...');
     try {
-      const response = await axios.get('https://mr-careful-broadway-print.trycloudflare.com/readings/');
+      const response = await axios.get(`${backendURL}/readings/`);
       console.log('API Response:', response);
       const data = response.data;
 
