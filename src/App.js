@@ -15,6 +15,7 @@ import StaffList from "./pages/staffList/StaffList";
 import DoctorList from "./pages/doctorList/DoctorList";
 import PatientList from "./pages/patientList/PatientList";
 import UpdateOwnerDetail from "./pages/updateOwnerDetail/UpdateOwnerDetail";
+import MonitoringGraph from "./components/monitoringGraph/MonitoringGraph";
 
 import RegisterNewStaff from "./components/registerNewStaff/registerNewStaff";
 import PatientMonitoringPage from "./pages/patientMonitoringPage/PatientMonitoringPage";
@@ -82,6 +83,7 @@ function App() {
               path="/monitor-patient"
               element={<PatientMonitoringPage />}
             />
+            <Route path="/monitor-page" element={<MonitoringGraph/>} />
 
             <Route path="/staff-list" element={<StaffList />} />
             <Route path="/doctor-list" element={<DoctorList />} />

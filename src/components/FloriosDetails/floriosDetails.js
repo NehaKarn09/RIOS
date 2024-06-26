@@ -1,6 +1,6 @@
 import React from "react";
 import RealTimeData from "../RealTimeData/RealTimeData";
-import VideoFeed from "../videoFeed/VideoFeed";
+import VideoFeed from "../VideoFeed/VideoFeed";
 import BarGraph from "../Graph/florios/BarGraph";
 import CurrentLevelGraph from "../Graph/florios/CurrentLevelGraph";
 import { useLocation } from "react-router-dom";

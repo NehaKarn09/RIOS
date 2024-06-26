@@ -4,7 +4,7 @@ import CurrentLevelGraph from "../Graph/florios/CurrentLevelGraph";
 import RealTimeData from "../RealTimeData/RealTimeData";
 import LineGraph from "../Graph/urios/LineGraph";
 import BarGraph from "../Graph/florios/BarGraph";
-import VideoFeed from "../videoFeed/VideoFeed";
+import VideoFeed from "../VideoFeed/VideoFeed";
 
 function UriosDetails() {
   return (
