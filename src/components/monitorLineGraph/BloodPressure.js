@@ -7,29 +7,41 @@ import { backendURL } from '../../utils/backendURL';
 const BloodPressure = () => {
   const [chartData, setChartData] = useState(null);
 
-const fetchData = async () => {
+  const fetchData = async () => {
+    console.log('Fetching data...');
     try {
       const response = await axios.get(`${backendURL}/readings/`);
+      console.log('API Response:', response);
       const data = response.data;
-  
-      // Use only the last 10 items
+
+      console.log('API Data:', data);
+
       const last10Data = data.slice(-10);
-  
-      // Prepare data for the chart
+
       const labels = last10Data.map(item => new Date(item.created_at).toLocaleTimeString());
-      const bp = last10Data.map(item => item.blood_pressure);
-  
+      const bpSystolic = last10Data.map(item => item.systolic_pressure);
+      const bpDiastolic = last10Data.map(item => item.diastolic_pressure);
+
       setChartData({
         labels: labels,
         datasets: [
           {
-            label: 'Blood Pressure',
-            data: bp,
+            label: 'Systolic Blood Pressure',
+            data: bpSystolic,
             backgroundColor: 'rgba(75, 192, 192, 0.6)',
             borderColor: 'rgba(75, 192, 192, 1)',
             borderWidth: 1,
             fill: false,
           },
+          {
+            label: 'Diastolic Blood Pressure',
+            data: bpDiastolic,
+            backgroundColor: 'rgba(75, 192, 192, 0.6)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            fill: false,
+            borderDash: [5, 5],
+          }
         ],
       });
     } catch (error) {
@@ -38,13 +50,13 @@ const fetchData = async () => {
   };
 
   useEffect(() => {
-    fetchData(); 
+    fetchData();
 
     const intervalId = setInterval(() => {
       fetchData();
-    }, 10000); 
+    }, 10000);
 
-    return () => clearInterval(intervalId); 
+    return () => clearInterval(intervalId);
   }, []);
 
   if (!chartData) {
@@ -64,13 +76,18 @@ const fetchData = async () => {
                 x: {
                   title: {
                     display: true,
-                    text: 'Timestamp'
+                    text: 'Time'
                   }
                 },
                 y: {
                   title: {
                     display: true,
-                    text: 'Blood Pressure'
+                    text: 'Pressure (mmHg)'
+                  },
+                  ticks: {
+                    stepSize: 20,
+                    min: 0,
+                    max: 200,
                   }
                 }
               }
@@ -83,3 +100,4 @@ const fetchData = async () => {
 };
 
 export default BloodPressure;
+
