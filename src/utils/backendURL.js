@@ -1,2 +1,2 @@
 export const backendURL =
-  "https://architect-granny-g-fundamental.trycloudflare.com/";
+  "https://sheep-campaigns-americans-continent.trycloudflare.com/";

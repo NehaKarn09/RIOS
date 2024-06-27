@@ -16,33 +16,33 @@ const MonitoringGraph = () => {
     <>
       <div className="container mx-auto px-4 mt-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="col-span-1">
+          {/* <div className="col-span-1">
             <CO2 />
-          </div>
+          </div> */}
           <div className="col-span-1">
             <HR />
           </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           <div className="col-span-1">
             <RespiratoryRate />
           </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           <div className="col-span-1">
             <Spo2 />
           </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-          <div className="col-span-1">
-            <SysDia />
-          </div>
-          <div className="col-span-1">
-            <PulseRate />
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           <div className="col-span-1">
             <BloodPressure />
           </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        {/* <div className="col-span-1">
+            <SysDia />
+          </div> */}
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8"> 
+          {/* <div className="col-span-1">
+            <PulseRate />
+          </div> */}
         </div>
       </div>
     </>
